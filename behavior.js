@@ -8,6 +8,12 @@ function share() {
     }, 100);
 }
 
+$(document).scroll(function() {
+    $('.unicorn').css({
+        marginTop: document.body.scrollTop
+    });
+});
+
 $('button').click(share);
 
 function serialize() {
