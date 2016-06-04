@@ -10,8 +10,31 @@ h1 {
     margin: auto;
     text-align: center;
 }
-img.unicorn {
+.unicorn {
     float: left;
+    position: relative;
+}
+.unicorn img {
+    position: absolute;
+}
+.unicorn img.assigned {
+    left: 134px;
+    top: 284px;
+    width: 49px;
+}
+.unicorn img.thought {
+    left: 198px;
+    top: 7px;
+    width: 100px;
+}
+.unicorn img.expression {
+    left: -34px;
+    width: 100px;
+}
+.unicorn img.attraction {
+    left: 138px;
+    top: 200px;
+    width: 64px;
 }
 section {
     text-align: left;
@@ -30,11 +53,7 @@ section {
     position: relative;
 }
 section.assigned {
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+    height: 180px;
 
     input[type=radio] {
         display: none;
