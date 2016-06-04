@@ -1,0 +1,22 @@
+{
+  "name": "gender-unicorn",
+  "authors": [
+    "Dionysis Zindros <dionyziz@gmail.com>"
+  ],
+  "description": "A gender unicorn",
+  "main": "",
+  "license": "MIT",
+  "homepage": "http://genderunicorn.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "less": "^2.7.1",
+    "jquery-modal": "^0.7.0"
+  }
+}

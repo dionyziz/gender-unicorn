@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The gender unicorn</title>
+        <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css' />
+        <link rel='stylesheet/less' type='text/css' href='sliders.less' />
+        <link rel='stylesheet/less' type='text/css' href='style.less' />
+        <link rel='stylesheet' href='bower_components/jquery-modal/jquery.modal.css' />
+        <script src='bower_components/less/dist/less.min.js'></script>
+    </head>
+    <body>
+        <h1>The Gender Unicorn</h1>
+
+        <div class='content'>
+            <img class='unicorn' src='images/unicorn-animal.jpg' width='300' />
+
+            <section class='identity'>
+                <h2><img width='30' src='images/identity.jpg' alt='Rainbow' /> Gender Identity</h2>
+
+                <div>
+                    <input id='identity-female' type='range' min='0' max='100' />
+                    <label for='identity-female'>Female / Woman / Girl</label>
+                </div>
+
+                <div>
+                    <input id='identity-male' type='range' min='0' max='100' />
+                    <label for='identity-male'>Male / Man / Boy</label>
+                </div>
+
+                <div>
+                    <input id='identity-other' type='range' min='0' max='100' />
+                    <label for='identity-other'>Other genders</label>
+                </div>
+            </section>
+
+            <section class='expression'>
+                <h2><img width='30' src='images/expression.jpg' alt='Green circle' /> Gender Expression</h2>
+
+                <div>
+                    <input id='expression-feminine' type='range' min='0' max='100' />
+                    <label for='expression-feminine'>Feminine</label>
+                </div>
+
+                <div>
+                    <input id='expression-masculine' type='range' min='0' max='100' />
+                    <label for='expression-masculine'>Masculine</label>
+                </div>
+
+                <div>
+                    <input id='expression-other' type='range' min='0' max='100' />
+                    <label for='expression-other'>Other</label>
+                </div>
+            </section>
+
+            <section class='assigned'>
+                <h2><img width='30' src='images/assigned.jpg' alt='DNA' /> Sex Assigned at Birth</h2>
+
+                <div class='female'>
+                    <input name='assigned' id='assigned-female' type='radio' />
+                    <label for='assigned-female'>
+                        <span>Female</span>
+                        <div class='circle'></div>
+                    </label>
+                </div>
+
+                <div class='male'>
+                    <input name='assigned' id='assigned-male' type='radio' />
+                    <label for='assigned-male'>
+                        <span>Male</span>
+                        <div class='circle'></div>
+                    </label>
+                </div>
+
+                <div class='other'>
+                    <input name='assigned' id='assigned-other' type='radio' />
+                    <label for='assigned-other'>
+                        <span>Other/Intersex</span>
+                        <div class='circle'></div>
+                    </label>
+                </div>
+            </section>
+
+            <section class='physical'>
+                <h2><img width='30' src='images/physical.jpg' alt='Orange heart' /> Physically Attracted to</h2>
+
+                <div>
+                    <input id='physical-women' type='range' min='0' max='100' />
+                    <label for='physical-women'>Women</label>
+                </div>
+
+                <div>
+                    <input id='physical-men' type='range' min='0' max='100' />
+                    <label for='physical-men'>Men</label>
+                </div>
+
+                <div>
+                    <input id='physical-other' type='range' min='0' max='100' />
+                    <label for='physical-other'>Other Gender(s)</label>
+                </div>
+            </section>
+
+            <section class='emotional'>
+                <h2><img width='30' src='images/emotional.jpg' alt='Red heart' /> Emotionally Attracted to</h2>
+
+                <div>
+                    <input id='emotional-women' type='range' min='0' max='100' />
+                    <label for='emotional-women'>Women</label>
+                </div>
+
+                <div>
+                    <input id='emotional-men' type='range' min='0' max='100' />
+                    <label for='emotional-men'>Men</label>
+                </div>
+
+                <div>
+                    <input id='emotional-other' type='range' min='0' max='100' />
+                    <label for='emotional-other'>Other Gender(s)</label>
+                </div>
+            </section>
+
+            <button>Share your unicorn</button>
+        </div>
+
+        <div id='share-modal' class='modal' style='display:none'>
+            Share your gender unicorn. Copy/paste this URL:
+
+            <input type='text' />
+        </div>
+
+        <script src='bower_components/jquery/dist/jquery.min.js'></script>
+        <script src='bower_components/jquery-modal/jquery.modal.min.js'></script>
+        <script src='behavior.js'></script>
+    </body>
+</html>
