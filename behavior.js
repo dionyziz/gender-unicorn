@@ -3,6 +3,12 @@ var assigned = false,
     expression = false,
     identity = false;
 
+var cssPrefix = (Array.prototype.slice
+    .call(window.getComputedStyle(document.documentElement, ''))
+    .join('')
+    .match(/-(moz|webkit|ms)-/) || (styles.OLink === '' && ['', 'o'])
+)[1];
+
 function share() {
     var store = serialize();
     document.location.hash = store;
@@ -29,12 +35,12 @@ function changeExpression() {
     deg %= 360;
 
     $('.unicorn img.expression').fadeIn();
-    $('.unicorn img.plain')[0].setAttribute('style', '-webkit-filter: hue-rotate(' + deg + 'deg)');
-    $('.unicorn img.assigned')[0].setAttribute('style', '-webkit-filter: hue-rotate(' + deg + 'deg)');
-    $('.unicorn img.plain')[0].setAttribute('style', '-moz-filter: hue-rotate(' + deg + 'deg)');
-    $('.unicorn img.assigned')[0].setAttribute('style', '-moz-filter: hue-rotate(' + deg + 'deg)');
     $('.unicorn img.plain')[0].setAttribute('style', 'filter: hue-rotate(' + deg + 'deg)');
     $('.unicorn img.assigned')[0].setAttribute('style', 'filter: hue-rotate(' + deg + 'deg)');
+    if (cssPrefix == 'webkit') {
+        $('.unicorn img.plain')[0].setAttribute('style', '-' + cssPrefix + '-filter: hue-rotate(' + deg + 'deg)');
+        $('.unicorn img.assigned')[0].setAttribute('style', '-' + cssPrefix + '-filter: hue-rotate(' + deg + 'deg)');
+    }
 
     if (assigned) {
         $('.unicorn img.assigned').show();
