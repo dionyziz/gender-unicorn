@@ -36,5 +36,5 @@ function unserialize(store) {
 }
 
 if (document.location.hash.length > 1) {
-    unserialize(document.location.hash);
+    unserialize(document.location.hash.replace(/#/, ''));
 }
