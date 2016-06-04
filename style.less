@@ -16,6 +16,10 @@ h1 {
 }
 .unicorn img {
     position: absolute;
+    display: none;
+}
+.unicorn img.plain {
+    display: block;
 }
 .unicorn img.assigned {
     left: 134px;
@@ -145,6 +149,8 @@ footer {
     font-size: 90%;
     line-height: 20px;
     margin: 20px 0 0 0;
+    z-index: 5;
+    position: relative;
 }
 footer a {
     color: white;
