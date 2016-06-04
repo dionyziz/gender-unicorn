@@ -2,10 +2,10 @@
 <html>
     <head>
         <title>The gender unicorn</title>
+        <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.min.css' />
         <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css' />
         <link rel='stylesheet/less' type='text/css' href='sliders.less' />
         <link rel='stylesheet/less' type='text/css' href='style.less' />
-        <link rel='stylesheet' href='bower_components/jquery-modal/jquery.modal.css' />
         <script src='bower_components/less/dist/less.min.js'></script>
     </head>
     <body>
@@ -118,14 +118,11 @@
                 </div>
             </section>
 
-            <button>Share your unicorn</button>
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#share-modal">
+                Share your unicorn
+            </button>
         </div>
 
-        <div id='share-modal' class='modal' style='display:none'>
-            Share your gender unicorn. Copy/paste this URL:
-
-            <input type='text' />
-        </div>
         <footer>
             <p>The Gender Unicorn site was made with <span class='heart'>♥</span> by <a href='https://twitter.com/dionyziz'>dionyziz</a> in Athens.</p>
             <p>Like the site? <a href='bitcoin:1Cbnaxxun3FGGYcEnVUNfg5Exa6CrNz5Li'><img src='images/bitcoin.svg' width='15' alt='BTC' /> Tip me in bitcoin</a>!</p>
@@ -137,8 +134,24 @@
             </p>
         </footer>
 
+        <div class="modal" tabindex="-1" role="dialog" id='share-modal'>
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Share your unicorn</h4>
+              </div>
+              <div class="modal-body">
+                <p>Share your gender unicorn. Copy/paste this URL:</p>
+
+                <input type='text' />
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
         <script src='bower_components/jquery/dist/jquery.min.js'></script>
-        <script src='bower_components/jquery-modal/jquery.modal.min.js'></script>
         <script src='behavior.js'></script>
+        <script src='bower_components/bootstrap/dist/js/bootstrap.min.js'></script>
     </body>
 </html>

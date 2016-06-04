@@ -1,12 +1,11 @@
 function share() {
     var store = serialize();
     document.location.hash = store;
-    $('#share-modal input').val(document.location.href).focus();
+
     setTimeout(function() {
+        $('#share-modal input').val(document.location.href).focus();
         $('#share-modal input').val(document.location.href).select();
-    }, 50);
-    $('#share-modal').show();
-    $('#share-modal').modal();
+    }, 100);
 }
 
 $('button').click(share);

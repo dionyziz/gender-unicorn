@@ -17,6 +17,6 @@
   "dependencies": {
     "jquery": "^2.2.4",
     "less": "^2.7.1",
-    "jquery-modal": "^0.7.0"
+    "bootstrap": "^3.3.6"
   }
 }
