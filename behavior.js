@@ -1,5 +1,6 @@
 var assigned = false,
-    attraction = false,
+    physical = false,
+    emotional = false,
     expression = false,
     identity = false;
 
@@ -55,15 +56,21 @@ function changeAssigned() {
     $('.unicorn img.assigned').show();
 }
 
-function changeAttraction() {
-    attraction = true;
-    $('.unicorn img.attraction').fadeIn();
+function changePhysical() {
+    physical = true;
+    $('.unicorn img.physical').fadeIn();
+}
+
+function changeEmotional() {
+    emotional = true;
+    $('.unicorn img.emotional').fadeIn();
 }
 
 $('section.identity input').change(changeIdentity);
 $('section.expression input').change(changeExpression);
 $('section.assigned input').change(changeAssigned);
-$('section.physical input, section.emotional input').change(changeAttraction);
+$('section.physical input').change(changePhysical);
+$('section.emotional input').change(changeEmotional);
 
 $(document).scroll(function() {
     $('.unicorn').css({
@@ -102,7 +109,8 @@ if (document.location.hash.length > 1) {
     setTimeout(function() {
         changeIdentity();
         changeAssigned();
-        changeAttraction();
+        changePhysical();
+        changeEmotional();
         changeExpression();
     }, 50);
 }
