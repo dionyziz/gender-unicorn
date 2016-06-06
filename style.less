@@ -16,10 +16,15 @@ h1 {
 }
 .unicorn img {
     position: absolute;
-    display: none;
+    opacity: 0;
+    transition: opacity 0.2s, transform 1s;
+
+    &.show {
+        opacity: 1;
+    }
 }
 .unicorn img.plain {
-    display: block;
+    opacity: 1;
 }
 .unicorn img.assigned {
     left: 134px;
@@ -38,14 +43,28 @@ h1 {
 .unicorn img.physical {
     left: 161px;
     top: 201px;
-    transform: rotate(20deg);
+    transform: rotate(-20deg) scale(2);
     width: 40px;
+    transition: opacity 0.2s, transform 1s;
+
+    &.show {
+        opacity: 1;
+        transform: rotate(20deg) scale(1);
+    }
 }
 .unicorn img.emotional {
     top: 201px;
     left: 140px;
-    transform: rotate(-20deg);
+    transform: rotate(20deg) scale(2);
     width: 42px;
+    transition: opacity 0.2s, transform 1s;
+
+    &.show {
+        opacity: 1;
+        transform: rotate(-20deg) scale(1);
+    }
+}
+.unicorn img.emotional.show {
 }
 section {
     text-align: left;

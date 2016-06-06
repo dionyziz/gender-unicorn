@@ -23,7 +23,7 @@ function share() {
 function changeIdentity() {
     identity = true;
 
-    $('.unicorn img.thought').fadeIn();
+    $('.unicorn img.thought').addClass('show');
 }
 
 function changeExpression() {
@@ -35,35 +35,28 @@ function changeExpression() {
     deg = Math.floor(deg);
     deg %= 360;
 
-    $('.unicorn img.expression').fadeIn();
+    $('.unicorn img.expression').addClass('show');
     $('.unicorn img.plain')[0].setAttribute('style', 'filter: hue-rotate(' + deg + 'deg)');
     $('.unicorn img.assigned')[0].setAttribute('style', 'filter: hue-rotate(' + deg + 'deg)');
     if (cssPrefix == 'webkit') {
         $('.unicorn img.plain')[0].setAttribute('style', '-' + cssPrefix + '-filter: hue-rotate(' + deg + 'deg)');
         $('.unicorn img.assigned')[0].setAttribute('style', '-' + cssPrefix + '-filter: hue-rotate(' + deg + 'deg)');
     }
-
-    if (assigned) {
-        $('.unicorn img.assigned').show();
-    }
-    if (attraction) {
-        $('.unicorn img.attraction').show();
-    }
 }
 
 function changeAssigned() {
     assigned = true;
-    $('.unicorn img.assigned').show();
+    $('.unicorn img.assigned').addClass('show');
 }
 
 function changePhysical() {
     physical = true;
-    $('.unicorn img.physical').fadeIn();
+    $('.unicorn img.physical').addClass('show');
 }
 
 function changeEmotional() {
     emotional = true;
-    $('.unicorn img.emotional').fadeIn();
+    $('.unicorn img.emotional').addClass('show');
 }
 
 $('section.identity input').change(changeIdentity);
